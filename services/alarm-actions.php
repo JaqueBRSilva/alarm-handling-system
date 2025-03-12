@@ -34,7 +34,7 @@
 
         $sql = "UPDATE alarms SET alarm_description = '$alarm_description', alarm_register_date = '$alarm_register_date', alarm_equipament = '$alarm_equipament', alarm_classification = '$alarm_classification'";
 
-        $sql .= " WHERE id = '$alarm_id'";
+        $sql .= " WHERE alarm_id = '$alarm_id'";
 
         mysqli_query($connection, $sql);
 

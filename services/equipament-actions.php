@@ -30,10 +30,9 @@
         $equipament_register_date = mysqli_real_escape_string($connection, trim($_POST['equipament_register_date']));
         $equipament_type = mysqli_real_escape_string($connection, trim($_POST['equipament_type']));
 
-
         $sql = "UPDATE equipaments SET equipament_serie_number = '$equipament_serie_number', equipament_register_date = '$equipament_register_date', equipament_type = '$equipament_type'";
 
-        $sql .= " WHERE id = '$equipament_id'";
+        $sql .= " WHERE equipament_id = '$equipament_id'";
 
         mysqli_query($connection, $sql);
 
