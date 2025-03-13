@@ -42,6 +42,9 @@
                         
                         <label for="">Selecione uma Classificação</label>
                         <select disabled class="form-select mb-3" name="alarm_classification" value="<?=$alarm['alarm_classification']?>">
+                            <option value="Urgente">Urgente</option>
+                            <option value="Emergente">Emergente</option>
+                            <option value="Ordinario">Ordinário</option>
                         </select>
 
                         <div class="mb-3">
