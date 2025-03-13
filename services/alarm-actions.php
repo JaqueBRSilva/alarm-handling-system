@@ -52,7 +52,7 @@
     if (isset($_POST['delete_alarm'])) {
         $alarm_id = mysqli_real_escape_string($connection, $_POST['delete_alarm']);
 
-        $sql = "DELETE FROM alarms WHERE id = '$alarm_id'";
+        $sql = "DELETE FROM alarms WHERE alarm_id = '$alarm_id'";
 
         mysqli_query($connection, $sql);
 

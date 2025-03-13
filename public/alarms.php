@@ -47,9 +47,12 @@
                                     <a href="update-alarm.php?id=<?=$alarm['alarm_id'] ?>" class="btn btn-success btn-sm">
                                         <span class="bi-pencil-fill"></span>&nbsp; Editar
                                     </a>
-                                    <a href="update-alarm.php?id=<?=$alarm['alarm_id'] ?>" class="btn btn-danger btn-sm">
-                                        <span class="bi-trash3-fill"></span>&nbsp; Apagar
-                                    </a>
+                                    <form action="../services/alarm-actions.php" method="post" class="d-inline">
+                                        <button onclick="return confirm('Tem certeza que deseja excluir?')" class="btn btn-danger btn-sm" value="<?=$alarm['alarm_id'] ?>" type="submit" name="delete_alarm">
+                                            <span class="bi-trash3-fill"></span>&nbsp;
+                                            Apagar
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                                 <?php 
