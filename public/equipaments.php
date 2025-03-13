@@ -12,12 +12,12 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Lista de Equipamentos
-                        <a href="create-equipament.php" class="btn btn-primary float-end">Adicionar</a>
+                        <a href="equipament-create.php" class="btn btn-primary float-end">Adicionar</a>
                     </h4>
                 </div>
 
                 <div class="card-body">
-                    <table class="table tabble-bordered table-striped">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>Número de Série</th>
@@ -39,10 +39,10 @@
                                 <td><?=date('d/m/Y H:i', strtotime($equipament['equipament_register_date']))?></td>
                                 <td><?=$equipament['equipament_type'] ?></td>
                                 <td class="d-flex gap-2">
-                                    <a href="create-equipament.php?id=<?=$equipament['equipament_id'] ?>" class="btn btn-secondary btn-sm">
+                                    <a href="equipament-details.php?equipament_id=<?=$equipament['equipament_id'] ?>" class="btn btn-secondary btn-sm">
                                         <span class="bi-eye-fill"></span>&nbsp; Visualizar
                                     </a>
-                                    <a href="update-equipament.php?id=<?=$equipament['equipament_id'] ?>" class="btn btn-success btn-sm">
+                                    <a href="equipament-update.php?equipament_id=<?=$equipament['equipament_id'] ?>" class="btn btn-success btn-sm">
                                         <span class="bi-pencil-fill"></span>&nbsp; Editar
                                     </a>
                                     <form action="../services/equipament-actions.php" method="post" class="d-inline">
