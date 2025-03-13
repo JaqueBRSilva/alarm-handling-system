@@ -17,7 +17,7 @@
         </div>
 
         <div class="card-body">
-          <table class="table tabble-bordered table-striped">
+          <table class="table table-striped">
             <thead>
               <tr>
                 <th>Descrição do Alarme</th>
@@ -41,7 +41,7 @@
                 <td><?=$alarm['alarm_equipament'] ?></td>
                 <td><?=$alarm['alarm_classification'] ?></td>
                 <td class="d-flex gap-2">
-                  <a href="alarm-details.php?id=<?=$alarm['alarm_id'] ?>" class="btn btn-secondary btn-sm">
+                  <a href="alarm-details.php?alarm_id=<?=$alarm['alarm_id'] ?>" class="btn btn-secondary btn-sm">
                     <span class="bi-eye-fill"></span>&nbsp; Visualizar
                   </a>
                 </td>
@@ -69,7 +69,7 @@
         </div>
 
         <div class="card-body">
-          <table class="table tabble-bordered table-striped">
+          <table class="table table-striped">
             <thead>
               <tr>
                 <th>Número de Série</th>
@@ -91,7 +91,7 @@
                 <td><?=date('d/m/Y H:i', strtotime($equipament['equipament_register_date']))?></td>
                 <td><?=$equipament['equipament_type'] ?></td>
                 <td class="d-flex gap-2">
-                  <a href="equipament-details.php?id=<?=$equipament['equipament_id'] ?>" class="btn btn-secondary btn-sm">
+                  <a href="equipament-details.php?equipament_id=<?=$equipament['equipament_id'] ?>" class="btn btn-secondary btn-sm">
                     <span class="bi-eye-fill"></span>&nbsp; Visualizar
                   </a>
                 </td>
