@@ -5,19 +5,19 @@
   require '../services/connection.php'
 ?>
 
+<?php include '../services/message.php' ?>
 <div class="container mt-4">
-    <?php include '../services/message.php' ?>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h4>Lista de Alarmes
-                        <a href="create-alarm.php" class="btn btn-primary float-end">Adicionar</a>
+                        <a href="alarm-create.php" class="btn btn-primary float-end">Adicionar</a>
                     </h4>
                 </div>
 
                 <div class="card-body">
-                    <table class="table tabble-bordered table-striped">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>Descrição do Alarme</th>
@@ -41,10 +41,10 @@
                                 <td><?=$alarm['alarm_equipament'] ?></td>
                                 <td><?=$alarm['alarm_classification'] ?></td>
                                 <td class="d-flex gap-2">
-                                    <a href="create-alarm.php?id=<?=$alarm['alarm_id'] ?>" class="btn btn-secondary btn-sm">
+                                    <a href="alarm-details.php?alarm_id=<?=$alarm['alarm_id'] ?>" class="btn btn-secondary btn-sm">
                                         <span class="bi-eye-fill"></span>&nbsp; Visualizar
                                     </a>
-                                    <a href="update-alarm.php?id=<?=$alarm['alarm_id'] ?>" class="btn btn-success btn-sm">
+                                    <a href="alarm-update.php?alarm_id=<?=$alarm['alarm_id'] ?>" class="btn btn-success btn-sm">
                                         <span class="bi-pencil-fill"></span>&nbsp; Editar
                                     </a>
                                     <form action="../services/alarm-actions.php" method="post" class="d-inline">
