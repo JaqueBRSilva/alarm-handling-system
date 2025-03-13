@@ -23,8 +23,8 @@
         }
     }
 
-    if (isset($_POST['update_usuario'])) {
-        $equipament_id = mysqli_real_escape_string($conexao, $_POST['equipament_id']);
+    if (isset($_POST['update_equipament'])) {
+        $equipament_id = mysqli_real_escape_string($connection, $_POST['equipament_id']);
 
         $equipament_serie_number = mysqli_real_escape_string($connection, trim($_POST['equipament_serie_number']));
         $equipament_register_date = mysqli_real_escape_string($connection, trim($_POST['equipament_register_date']));
@@ -48,10 +48,10 @@
         }
     }
 
-    if (isset($_POST['delete_usuario'])) {
-        $equipament_id = mysqli_real_escape_string($connection, $_POST['delete_usuario']);
+    if (isset($_POST['delete_equipament'])) {
+        $equipament_id = mysqli_real_escape_string($connection, $_POST['delete_equipament']);
 
-        $sql = "DELETE FROM equipaments WHERE id = '$equipament_id'";
+        $sql = "DELETE FROM equipaments WHERE equipament_id = '$equipament_id'";
 
         mysqli_query($connection, $sql);
 
